@@ -1,0 +1,828 @@
+@charset "utf-8";
+
+/*
+Theme Name: latest mami-matsumotophotography
+Theme URI: http://mami-matsumoto.com/
+Author: Mami Matsumoto
+Author URI: http://mami-matsumoto.com/
+Description: mami-matsumotophotography
+Text Domain: mami-matsumotophotography
+
+This theme, portfolio.
+*/
+
+
+
+/* Copyright (C) Google
+* https://www.google.com/get/noto/
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+
+
+/* ========================================
+    全体設定
+========================================= */
+body {
+	width:100%;
+	color:#2a2a2a;
+	line-height:1.5;
+	 font-family: 'Noto Sans Japanese', sans-serif;
+	
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*ここからwebフォント読み込み*/
+
+@font-face {
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 200;
+    src: url('font/NotoSansCJKjp-Light.eot');
+    src: url('font/NotoSansCJKjp-Light.eot?#iefix') format('embedded-opentype'),
+    url('font/NotoSansCJKjp-Light.woff') format('woff'),
+    url('font/NotoSansCJKjp-Light.ttf')  format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 300;
+    src: url('font/NotoSansCJKjp-DemiLight.eot');
+    src: url('font/NotoSansCJKjp-DemiLight.eot?#iefix') format('embedded-opentype'),
+    url('font/NotoSansCJKjp-DemiLight.woff') format('woff'),
+    url('font/NotoSansCJKjp-DemiLight.ttf')  format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 700;
+    src: url('font/NotoSansCJKjp-Bold.eot');
+    src: url('font/NotoSansCJKjp-Bold.eot?#iefix') format('embedded-opentype'),
+    url('font/NotoSansCJKjp-Bold.woff') format('woff'),
+    url('font/NotoSansCJKjp-Bold.ttf')  format('truetype');
+}
+
+/*webフォント読み込みここまで*/
+
+
+a {
+	color:#2a2a2a;
+	text-decoration:none;
+}
+
+
+html,body{
+  margin:0px;padding:0px;
+}
+
+
+/*loading*/
+
+#loading{
+
+
+}
+
+
+
+
+
+
+
+
+/* ========================================
+    ヘッダー
+========================================= */
+header {
+    background: rgba(255, 255, 255, 0.7) !important;
+
+}
+
+
+ body,
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+    }
+ 
+    
+    img {
+      max-width: 100%;
+      
+    }
+ 
+
+
+
+
+
+
+.inner {
+    width: 100%;
+    margin:0 auto;
+    padding:20px;
+    
+    
+}
+.inner:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+ 
+/* header */
+#top-head {
+    top: -130px;
+    position:absolute;
+    width: 100%;
+    margin:100px auto 0;
+    padding: 30px 0 0;
+    line-height: 1;
+    z-index: 999;
+    
+}
+
+#top-head a,
+#top-head {
+  
+    text-decoration: none;
+    font-weight:300;
+}
+
+#top-head a:hover{
+  color:#ffffff;
+}
+#top-head .inner {
+  position:relative;
+}
+#top-head h1.logo a div{
+    float:left;
+    background-image:url(img/logo3.png);
+    background-repeat:no-repeat;
+    width:380px;
+    height:25px;
+    z-index:1000;
+    
+}
+
+
+#global-nav ul {
+    list-style: none;
+    position:absolute;
+    right:50px;
+    bottom:-13px;
+    font-size: 12px;
+    
+    z-index: 1;
+}
+#global-nav ul li {
+  float:left;
+
+}
+#global-nav ul li a {
+    padding: 20px;
+    color:#474747;
+}
+
+#global-nav ul li a:hover{
+  color:#980202;
+}
+
+#global-nav ul li a.active{
+  color:#980202;
+}
+
+#global-nav a:after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: #980202;
+    margin: 25px 0 auto;
+    transition: .25s ease-out;
+    -webkit-transition: .25s ease-out;
+    -moz-transition: .25s ease-out;
+    -o-transition: .25s ease-out;
+    -ms-transition: .25s ease-out;
+}
+#global-nav a:hover:after {
+    width: 100%;
+}
+
+
+ 
+/* Fixed */
+#top-head.fixed {
+    margin-top: 0;
+    top: 0;
+    left:0;
+    position: fixed;
+    padding-top: 0px;
+    height: 65px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: top 0.65s ease-in;
+    -webkit-transition: top 0.65s ease-in;
+    -moz-transition: top 0.65s ease-in;
+}
+#top-head.fixed .logo {
+    font-size: 18px;
+    color: #ffffff;
+
+}
+#top-head.fixed #global-nav ul li a {
+    color: #474747;
+    padding: 0 20px;
+}
+
+#top-head.fixed #global-nav ul li a:hover{
+  color:#980202;
+}
+
+ 
+/* Toggle Button */
+#nav-toggle {
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 48px;
+    height: 42px;
+    cursor: pointer;
+    z-index: 101;
+    background-color:#2a2a2a;
+
+}
+#nav-toggle div {
+    position: relative;
+}
+#nav-toggle span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 15px;
+    background: #fff;
+    left: 17px;
+    top:15px;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+}
+#nav-toggle span:nth-child(1) {
+    top: 15px;
+}
+#nav-toggle span:nth-child(2) {
+    top: 20px;
+}
+#nav-toggle span:nth-child(3) {
+    top: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*モバイルサイト*/
+
+
+
+@media screen and (max-width: 620px) and (min-width: 200px){
+
+  
+   #top-head,
+      .inner {
+          width: 100%;
+          padding: 0;
+      }
+
+      #top-head {
+          top: 0;
+          position: fixed;
+          margin-top: 0;
+        
+      }
+
+
+    /* Fixed reset */
+
+    #top-head.fixed {
+        padding-top: 0;
+        background: transparent;
+    }
+    #mobile-head {
+        width: 100%;
+        height: 34px;
+        padding-top:15px;
+        padding-bottom:15px;
+        z-index: 999;
+        position: relative;
+        background-color:#fff;
+    }
+
+    #top-head h1.logo a div{
+    margin:0 auto;
+    width:147px;
+    height:34px;
+    background-image:url(img/logo1.png);
+    background-size:contain;
+    background-repeat:no-repeat;
+    float:none;  
+}
+
+
+
+    #top-head.fixed .logo,
+    #top-head .logo {
+        
+    }
+    #global-nav {
+        position: absolute;
+        left:0;
+        /* 開いてないときは画面外に配置 */
+        top: -500px;
+        
+        width: 100%;
+        
+        padding: 0px 0;
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+    }
+    #global-nav ul {
+        list-style: none;
+        position: static;
+        left: 10px;
+        bottom: 10px;
+        font-size: 12px;
+        background: rgba(38, 38, 38, 0.9);
+        z-index: 100;
+
+    }
+    #global-nav ul li {
+        float: none;
+        position: static;
+    }
+
+    #global-nav ul li:first-child{
+      padding-top:15px;
+    }
+
+    #global-nav ul li:last-child{
+      padding-bottom:15px;
+    }
+
+
+    #top-head #global-nav ul li a,
+    #top-head.fixed #global-nav ul li a {
+        width: 100%;
+        display: block;
+        color: #fff;
+        padding: 10px 10px;
+        padding-bottom:10px;
+    }
+
+    #top-head #global-nav ul li a:hover{
+      background-color:black;
+      color:#fff;
+    }
+
+    #top-head.fixed #global-nav ul li a:hover{
+      background-color:black;
+      color:#fff;
+    }
+
+    #top-head #global-nav ul li a.active{
+      background-color:black;
+      color:#fff;
+    }
+
+    #global-nav a:after{
+      display:none;
+    }
+
+
+
+
+
+
+
+    #nav-toggle {
+        display: block;
+    }
+    /* #nav-toggle 切り替えアニメーション */
+    .open #nav-toggle span:nth-child(1) {
+        top: 20px;
+        -webkit-transform: rotate(315deg);
+        -moz-transform: rotate(315deg);
+        transform: rotate(315deg);
+    }
+    .open #nav-toggle span:nth-child(2) {
+        width: 0;
+        left: 50%;
+    }
+    .open #nav-toggle span:nth-child(3) {
+        top: 20px;
+        -webkit-transform: rotate(-315deg);
+        -moz-transform: rotate(-315deg);
+        transform: rotate(-315deg);
+    }
+    /* #global-nav スライドアニメーション */
+    .open #global-nav {
+        /* #global-nav top + #mobile-head height */
+        -moz-transform: translateY(556px);
+        -webkit-transform: translateY(556px);
+        transform: translateY(556px);
+    }
+}
+
+/*モバイルサイト終わり*/
+
+
+/*タブレットサイト*/
+@media screen and (max-width: 960px) and (min-width: 620px) {
+
+    #top-head h1.logo a div{
+      margin:0 auto;
+      width:363px;
+      height:18px;
+      background-image:url(img/logo2.png);
+      background-size:contain;
+      background-repeat:no-repeat;
+      float:none;  
+  }
+
+  #top-head,
+      .inner {
+          width: 100%;
+          padding: 0;
+      }
+
+      #top-head {
+          top: 0;
+          position: fixed;
+          margin-top: 0;
+        
+      }
+
+      #top-head #global-nav ul li a:hover{
+      background-color:black;
+      color:#fff;
+    }
+
+    #top-head #global-nav ul li a.active{
+      background-color:black;
+      color:#fff;
+    }
+
+    #global-nav a:after{
+      display:none;
+    }
+
+    #global-nav ul li:first-child{
+      padding-top:15px;
+    }
+
+    #global-nav ul li:last-child{
+      padding-bottom:15px;
+    }
+
+      /* Fixed reset */
+
+      #top-head.fixed {
+          padding-top: 0;
+          background: transparent;
+      }
+      #mobile-head {
+          width: 100%;
+          height: 18px;
+          padding-top:23px;
+          padding-bottom:23px;
+          z-index: 999;
+          position: relative;
+          background-color:#fff;
+      }
+
+
+
+      #top-head.fixed .logo,
+      #top-head .logo {
+          
+      }
+      #global-nav {
+          position: absolute;
+          left:0;
+          /* 開いてないときは画面外に配置 */
+          top: -500px;
+  
+          width: 100%;
+          z-index: 1;
+          
+          padding: 0px 0;
+          -webkit-transition: .5s ease-in-out;
+          -moz-transition: .5s ease-in-out;
+          transition: .5s ease-in-out;
+      }
+      #global-nav ul {
+          list-style: none;
+          position: static;
+          left: 10px;
+          bottom: 10px;
+          font-size: 12px;
+      }
+      #global-nav ul li {
+          float: none;
+          position: static;
+      }
+
+      
+      
+
+      #global-nav ul li#fin{
+        padding-bottom:15px;
+      }
+
+
+      #top-head #global-nav ul li a,
+      #top-head.fixed #global-nav ul li a {
+          width: 100%;
+          display: block;
+          background: rgba(38, 38, 38, 0.9);
+          padding: 15px 10px;
+          padding-bottom:10px;
+          color:#fff;
+      }
+
+      #top-head.fixed #global-nav ul li a:hover{
+        background-color:black;
+      color:#fff;
+      }
+
+      #top-head #global-nav ul li a:hover{
+        color:#ffffff;
+      }
+ 
+
+
+
+
+
+
+
+      #nav-toggle {
+          display: block;
+      }
+      /* #nav-toggle 切り替えアニメーション */
+      .open #nav-toggle span:nth-child(1) {
+          top: 20px;
+          -webkit-transform: rotate(315deg);
+          -moz-transform: rotate(315deg);
+          transform: rotate(315deg);
+      }
+      .open #nav-toggle span:nth-child(2) {
+          width: 0;
+          left: 50%;
+      }
+      .open #nav-toggle span:nth-child(3) {
+          top: 20px;
+          -webkit-transform: rotate(-315deg);
+          -moz-transform: rotate(-315deg);
+          transform: rotate(-315deg);
+      }
+      /* #global-nav スライドアニメーション */
+      .open #global-nav {
+          /* #global-nav top + #mobile-head height */
+          -moz-transform: translateY(556px);
+          -webkit-transform: translateY(556px);
+          transform: translateY(556px);
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================
+    カテゴリー
+========================================= */
+
+div#category{
+	max-width:1000px;
+	margin-top:85px;
+	margin-bottom:10px;
+  margin-left:2px;
+	padding:0 10px;
+	overflow:hidden;
+	}
+
+div#category li{
+	float:left;
+	padding-right:20px;
+}
+
+div#category li a{
+	font-size:14px;
+	font-weight:300px;
+}
+
+div#category li a:hover{
+	color:#980202;
+}
+
+div#category a:after {
+    display: block;
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: #980202;
+    margin: 5px auto 0;
+    transition: .25s ease-out;
+    -webkit-transition: .25s ease-out;
+    -moz-transition: .25s ease-out;
+    -o-transition: .25s ease-out;
+    -ms-transition: .25s ease-out;
+}
+div#category a:hover:after {
+    width: 100%;
+}
+
+
+
+/* ========================================
+    写真一覧
+========================================= */
+
+div#posts{
+	max-width:1500px;
+	height:auto;
+  margin-left:auto;
+  margin-right:auto;
+	padding-right:0px;
+  margin:0 auto;
+}
+
+
+div.post{
+	width:auto;
+  
+	
+}
+
+
+
+div.gallery-item{
+	width:100%;
+  max-width:620px;
+  margin:0px;
+
+}
+
+
+div.post a img:hover{
+  opacity: 0.7;
+}
+
+
+
+
+/* ========================================
+    フッター
+========================================= */
+
+footer{
+	margin-bottom:20px;
+  margin-top:20px;
+	width:100%;
+	height:auto;
+	clear:both;
+}
+footer p{
+	color:#262626;
+	font-size:12px;
+	text-align:center;
+}
+
+
+/*モバイルサイト終わり*/
+
+
+@media (min-width: 620px) {
+ 
+  
+ 
+  div.gallery-item{
+  width:49%;
+  max-width:510px;
+  margin: 0 3px;
+  }
+
+
+  }/*タブレット終わり*/
+
+
+@media (min-width: 960px) {
+
+ 
+   
+     div#posts{
+    width:100%;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+    padding:0px;
+    z-index: 2; 
+  }
+
+
+div.gallery-item{
+  width:24%;
+  max-width:410px;
+  margin: 0 3px;
+  }
+
+
+
+
+  }/*PC終わり*/
+
+
+
+
+/* ========================================
+    ここからtopのスタイル
+========================================= */
+div#contacts{
+  width:80%;
+  margin:0 auto;
+  background-color:red;
+  text-align:center;
+}
+
+
+h2#contact{
+  margin:0 auto;
+  width:80%;
+  margin-top:70px;
+  text-align:center;
+  font-weight:300;
+  font-size:18px;
+}
+
+ 
+
+p#contact{
+  margin:0 auto;
+  width:80%;
+  text-align:center;
+  font-weight:200;
+  font-size:14px;
+  margin-top:30px;
+}
+
+
+
+
+
+
+
+
