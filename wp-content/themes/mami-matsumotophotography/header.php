@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="MAMI MATSUMOTO PHOTOGRAPHYはフォトグラファーmami matsumotoのポートフォリオサイトです。">
-    <meta name="keywords" content="ポートフォリオ, フォトグラファー, ギャラリー, 旅, 写真,  mami">
+    <meta name="keywords" content="ポートフォリオ, フォトグラファー, ギャラリー, 旅, 写真,photography  mami">
 
 	<!-- スタイルシートの読み込み -->
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen">
